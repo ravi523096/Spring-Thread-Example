@@ -8,7 +8,7 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import com.threadUtils.util.Constants;
 
 @Configuration
-@ComponentScan(basePackages = "com.threadUtils.config")
+@ComponentScan(basePackages = "com.threadUtils.thread")
 public class AppConfig {
 	@Bean
 	public ThreadPoolTaskExecutor taskExecutor() {
