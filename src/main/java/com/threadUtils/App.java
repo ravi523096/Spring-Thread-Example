@@ -69,13 +69,13 @@ public class App {
 		printTask1.setName("Thread 1");
 		taskExecutor.execute(printTask1);
 
-		PrintTask2 printTask2 = (PrintTask2) context.getBean("printTask2");
-		printTask2.setName("Thread 2");
-		taskExecutor.execute(printTask2);
-
-		PrintTask2 printTask3 = (PrintTask2) context.getBean("printTask2");
-		printTask3.setName("Thread 3");
-		taskExecutor.execute(printTask3);
+//		PrintTask2 printTask2 = (PrintTask2) context.getBean("printTask2");
+//		printTask2.setName("Thread 2");
+//		taskExecutor.execute(printTask2);
+//
+//		PrintTask2 printTask3 = (PrintTask2) context.getBean("printTask2");
+//		printTask3.setName("Thread 3");
+//		taskExecutor.execute(printTask3);
 
 		while(true) {
 			int count = taskExecutor.getActiveCount();

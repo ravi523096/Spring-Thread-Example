@@ -3,6 +3,8 @@ package com.threadUtils.thread;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import com.threadUtils.util.Constants;
+
 @Component
 @Scope("prototype")
 public class PrintTask2 implements Runnable{
@@ -19,7 +21,15 @@ public class PrintTask2 implements Runnable{
 		System.out.println(name + " is running");
 		
 		try {
-			Thread.sleep(5000);
+			while (true) {
+				Thread.sleep(Constants.THREAD_DELAY_MS);
+//				List<ExcelInfo> lstExcelInfo_All = Util.readDataFromExcel(Constants.EXCEL_FILE_NAME);
+//				List<ExcelInfo> lstExcelInfo_Processed = Util.processedExcelInfo(lstExcelInfo);
+//				if (null != lstExcelInfo_Processed && lstExcelInfo_Processed.size() > 0) {
+//					Util.triggerTestsForProcessedRecords(lstExcelInfo_Processed);
+//					Util.removeFromExcel(lstExcelInfo_Processed);
+//				}
+			}
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
